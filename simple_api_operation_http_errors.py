@@ -1,8 +1,8 @@
 import requests
-requests.packages.urllib3.disable_warnings()
 from requests.exceptions import Timeout
 import base64
 
+requests.packages.urllib3.disable_warnings()
 
 USER_DNA = "devnetuser"
 PASSWORD_DNA = "Cisco123!"
