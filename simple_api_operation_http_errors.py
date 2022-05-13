@@ -48,6 +48,10 @@ def checkSimpleRequest(API_Server):
     try:
         response = requests.get(urlSimpleDNA, headers=HTTP_Request_header)
         print ("\n API Operation: GET https://sandboxdnac.cisco.com/api/v1/network-device/ \n", response.json())
+        if response.status_code == 429:
+            retry_after = response.getheader("Retry-After")
+            time.sleep(retry_after)
+            #time.sleep(30)
         if response.status_code != 200:
             print("Error SimpleRequest status_code != 200")
 
