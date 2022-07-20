@@ -12,6 +12,7 @@ For Linux:
 ### Paste - SHIFT+INSERT
 
 Clone the repo
+
 ```
 git clone https://github.com/oborys/DevNet-intro-scripts.git
 ```
